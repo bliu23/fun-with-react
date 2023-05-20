@@ -1,0 +1,23 @@
+
+.Article {
+    width: 800px;
+    display: flex;
+    justify-content: flex-start;
+    /* gap: 20px; */
+}
+
+.column {
+    flex: 1;
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.quarter {
+    flex-basis: 25%;
+}
+
+.half {
+    flex-basis: 50%;
+}
