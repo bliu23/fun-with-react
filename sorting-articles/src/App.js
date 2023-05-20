@@ -14,7 +14,7 @@ function App()  {
       setArticles(sorted)
     }
     function sortUpvotes() {
-      const sorted = [...articles].sort((a, b) => a.upvotes.localeCompare(b.upvotes))
+      const sorted = [...articles].sort((a, b) => a.upvotes - b.upvotes)
       setArticles(sorted)
     }
 
@@ -25,10 +25,10 @@ function App()  {
     // Pretend function to fetch articles.
     async function fetchArticles() {
       const fetched = [
-        {'title': 'Some Title', 'upvotes': '1', 'date': '05/20/23'},
-        {'title': 'DDIA', 'upvotes': '420', 'date': '03/20/23'},
-        {'title': 'Developing Developers', 'upvotes': '69', 'date': '01/01/22'},
-        {'title': 'Last Title', 'upvotes': '50', 'date': '12/12/22'}
+        {'title': 'Some Title', 'upvotes': 1, 'date': '05/20/23'},
+        {'title': 'Will ChatGPT take over the world?', 'upvotes': 500, 'date': '03/20/23'},
+        {'title': 'Developing Developers', 'upvotes': 79, 'date': '01/01/22'},
+        {'title': 'Last Title', 'upvotes': 50, 'date': '12/12/22'}
       ]
       setArticles(fetched)
     }
